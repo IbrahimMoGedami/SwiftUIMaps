@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E61FBE2DB1099A00FCAC87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E61FBC2DB1099A00FCAC87 /* MapView.swift */; };
 		05FC5D552DA99CC600684754 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FC5D4E2DA99CC600684754 /* Preview Assets.xcassets */; };
 		05FC5D562DA99CC600684754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FC5D502DA99CC600684754 /* Assets.xcassets */; };
 		05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D4B2DA99CC600684754 /* Annotations+Extensions.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05E61FBC2DB1099A00FCAC87 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		05FC5D152DA99C2300684754 /* SwiftUIMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FC5D252DA99C2400684754 /* SwiftUIMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FC5D4B2DA99CC600684754 /* Annotations+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Annotations+Extensions.swift"; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05E61FBD2DB1099A00FCAC87 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				05E61FBC2DB1099A00FCAC87 /* MapView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		05FC5D0C2DA99C2300684754 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		05FC5D542DA99CC600684754 /* SwiftUIMaps */ = {
 			isa = PBXGroup;
 			children = (
+				05E61FBD2DB1099A00FCAC87 /* CustomViews */,
 				05FC5D672DAA54AD00684754 /* View */,
 				05FC5D642DAA546C00684754 /* Model */,
 				05FC5D5F2DA99D8D00684754 /* Helper */,
@@ -261,6 +272,7 @@
 				05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */,
 				05FC5D6B2DAA54D700684754 /* LiveMapView.swift in Sources */,
 				05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */,
+				05E61FBE2DB1099A00FCAC87 /* MapView.swift in Sources */,
 				05FC5D582DA99CC600684754 /* CLLocationCoordinate2D .swift in Sources */,
 				05FC5D692DAA54B900684754 /* TrackedUserAnnotationView.swift in Sources */,
 				05FC5D632DAA545700684754 /* TrackingManager.swift in Sources */,
