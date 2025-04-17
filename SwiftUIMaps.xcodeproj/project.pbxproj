@@ -11,7 +11,7 @@
 		05FC5D562DA99CC600684754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FC5D502DA99CC600684754 /* Assets.xcassets */; };
 		05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D4B2DA99CC600684754 /* Annotations+Extensions.swift */; };
 		05FC5D582DA99CC600684754 /* CLLocationCoordinate2D .swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D4C2DA99CC600684754 /* CLLocationCoordinate2D .swift */; };
-		05FC5D592DA99CC600684754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D512DA99CC600684754 /* ContentView.swift */; };
+		05FC5D592DA99CC600684754 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D512DA99CC600684754 /* MainMapView.swift */; };
 		05FC5D5A2DA99CC600684754 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D522DA99CC600684754 /* MainViewModel.swift */; };
 		05FC5D5B2DA99CC600684754 /* SwiftUIMapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */; };
 		05FC5D5E2DA99CCA00684754 /* SwiftUIMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D5C2DA99CCA00684754 /* SwiftUIMapsTests.swift */; };
@@ -20,6 +20,9 @@
 		05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D652DAA547E00684754 /* TrackedUser.swift */; };
 		05FC5D692DAA54B900684754 /* TrackedUserAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */; };
 		05FC5D6B2DAA54D700684754 /* LiveMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D6A2DAA54D700684754 /* LiveMapView.swift */; };
+		05FC5D6D2DAA601500684754 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D6C2DAA601500684754 /* SearchView.swift */; };
+		05FC5D6F2DAA602E00684754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D6E2DAA602E00684754 /* ContentView.swift */; };
+		05FC5D712DAAC0E600684754 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D702DAAC0E600684754 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		05FC5D4C2DA99CC600684754 /* CLLocationCoordinate2D .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D .swift"; sourceTree = "<group>"; };
 		05FC5D4E2DA99CC600684754 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05FC5D502DA99CC600684754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05FC5D512DA99CC600684754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05FC5D512DA99CC600684754 /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
 		05FC5D522DA99CC600684754 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapsApp.swift; sourceTree = "<group>"; };
 		05FC5D5C2DA99CCA00684754 /* SwiftUIMapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapsTests.swift; sourceTree = "<group>"; };
@@ -48,6 +51,9 @@
 		05FC5D652DAA547E00684754 /* TrackedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedUser.swift; sourceTree = "<group>"; };
 		05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedUserAnnotationView.swift; sourceTree = "<group>"; };
 		05FC5D6A2DAA54D700684754 /* LiveMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapView.swift; sourceTree = "<group>"; };
+		05FC5D6C2DAA601500684754 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		05FC5D6E2DAA602E00684754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05FC5D702DAAC0E600684754 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +118,7 @@
 				05FC5D4D2DA99CC600684754 /* Extensions */,
 				05FC5D4F2DA99CC600684754 /* Preview Content */,
 				05FC5D502DA99CC600684754 /* Assets.xcassets */,
-				05FC5D512DA99CC600684754 /* ContentView.swift */,
+				05FC5D512DA99CC600684754 /* MainMapView.swift */,
 				05FC5D522DA99CC600684754 /* MainViewModel.swift */,
 				05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */,
 			);
@@ -149,6 +155,9 @@
 			children = (
 				05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */,
 				05FC5D6A2DAA54D700684754 /* LiveMapView.swift */,
+				05FC5D6C2DAA601500684754 /* SearchView.swift */,
+				05FC5D6E2DAA602E00684754 /* ContentView.swift */,
+				05FC5D702DAAC0E600684754 /* MapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,14 +269,17 @@
 			files = (
 				05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */,
 				05FC5D6B2DAA54D700684754 /* LiveMapView.swift in Sources */,
+				05FC5D6F2DAA602E00684754 /* ContentView.swift in Sources */,
 				05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */,
+				05FC5D712DAAC0E600684754 /* MapView.swift in Sources */,
 				05FC5D582DA99CC600684754 /* CLLocationCoordinate2D .swift in Sources */,
 				05FC5D692DAA54B900684754 /* TrackedUserAnnotationView.swift in Sources */,
 				05FC5D632DAA545700684754 /* TrackingManager.swift in Sources */,
 				05FC5D612DA99D9600684754 /* LocationManager.swift in Sources */,
-				05FC5D592DA99CC600684754 /* ContentView.swift in Sources */,
+				05FC5D592DA99CC600684754 /* MainMapView.swift in Sources */,
 				05FC5D5A2DA99CC600684754 /* MainViewModel.swift in Sources */,
 				05FC5D5B2DA99CC600684754 /* SwiftUIMapsApp.swift in Sources */,
+				05FC5D6D2DAA601500684754 /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
