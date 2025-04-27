@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUIMapsApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            LiveMapView(locationManager: LocationManager(), trackingManager: TrackingManager())
+//            LiveMapView(locationManager: LocationManager(), trackingManager: TrackingManager())
+            ContentView()
         }
     }
+    
 }

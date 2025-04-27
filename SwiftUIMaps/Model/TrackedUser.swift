@@ -14,3 +14,10 @@ struct TrackedUser: Identifiable {
     var coordinate: CLLocationCoordinate2D
     
 }
+
+struct IdentifiableLocation: Identifiable {
+    
+    var id = UUID()
+    var coordinate: CLLocationCoordinate2D
+    
+}

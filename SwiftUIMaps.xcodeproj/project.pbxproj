@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053E78DB2DBE19AF0067D860 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E78DA2DBE19AF0067D860 /* LocationPickerView.swift */; };
+		053E78DD2DBE19E50067D860 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E78DC2DBE19E50067D860 /* View+Extensions.swift */; };
 		05FC5D552DA99CC600684754 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FC5D4E2DA99CC600684754 /* Preview Assets.xcassets */; };
 		05FC5D562DA99CC600684754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FC5D502DA99CC600684754 /* Assets.xcassets */; };
 		05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D4B2DA99CC600684754 /* Annotations+Extensions.swift */; };
 		05FC5D582DA99CC600684754 /* CLLocationCoordinate2D .swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D4C2DA99CC600684754 /* CLLocationCoordinate2D .swift */; };
-		05FC5D592DA99CC600684754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D512DA99CC600684754 /* ContentView.swift */; };
+		05FC5D592DA99CC600684754 /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D512DA99CC600684754 /* MainMapView.swift */; };
 		05FC5D5A2DA99CC600684754 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D522DA99CC600684754 /* MainViewModel.swift */; };
 		05FC5D5B2DA99CC600684754 /* SwiftUIMapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */; };
 		05FC5D5E2DA99CCA00684754 /* SwiftUIMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D5C2DA99CCA00684754 /* SwiftUIMapsTests.swift */; };
 		05FC5D612DA99D9600684754 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D602DA99D9600684754 /* LocationManager.swift */; };
-		05FC5D632DAA545700684754 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D622DAA545700684754 /* TrackingManager.swift */; };
 		05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D652DAA547E00684754 /* TrackedUser.swift */; };
 		05FC5D692DAA54B900684754 /* TrackedUserAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */; };
-		05FC5D6B2DAA54D700684754 /* LiveMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D6A2DAA54D700684754 /* LiveMapView.swift */; };
+		05FC5D6F2DAA602E00684754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D6E2DAA602E00684754 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,21 +34,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053E78DA2DBE19AF0067D860 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		053E78DC2DBE19E50067D860 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		05FC5D152DA99C2300684754 /* SwiftUIMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FC5D252DA99C2400684754 /* SwiftUIMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FC5D4B2DA99CC600684754 /* Annotations+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Annotations+Extensions.swift"; sourceTree = "<group>"; };
 		05FC5D4C2DA99CC600684754 /* CLLocationCoordinate2D .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D .swift"; sourceTree = "<group>"; };
 		05FC5D4E2DA99CC600684754 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05FC5D502DA99CC600684754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05FC5D512DA99CC600684754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05FC5D512DA99CC600684754 /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
 		05FC5D522DA99CC600684754 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapsApp.swift; sourceTree = "<group>"; };
 		05FC5D5C2DA99CCA00684754 /* SwiftUIMapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapsTests.swift; sourceTree = "<group>"; };
 		05FC5D602DA99D9600684754 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		05FC5D622DAA545700684754 /* TrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
 		05FC5D652DAA547E00684754 /* TrackedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedUser.swift; sourceTree = "<group>"; };
 		05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedUserAnnotationView.swift; sourceTree = "<group>"; };
-		05FC5D6A2DAA54D700684754 /* LiveMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMapView.swift; sourceTree = "<group>"; };
+		05FC5D6E2DAA602E00684754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				05FC5D4B2DA99CC600684754 /* Annotations+Extensions.swift */,
 				05FC5D4C2DA99CC600684754 /* CLLocationCoordinate2D .swift */,
+				053E78DC2DBE19E50067D860 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,7 +115,7 @@
 				05FC5D4D2DA99CC600684754 /* Extensions */,
 				05FC5D4F2DA99CC600684754 /* Preview Content */,
 				05FC5D502DA99CC600684754 /* Assets.xcassets */,
-				05FC5D512DA99CC600684754 /* ContentView.swift */,
+				05FC5D512DA99CC600684754 /* MainMapView.swift */,
 				05FC5D522DA99CC600684754 /* MainViewModel.swift */,
 				05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */,
 			);
@@ -131,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				05FC5D602DA99D9600684754 /* LocationManager.swift */,
-				05FC5D622DAA545700684754 /* TrackingManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -148,7 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */,
-				05FC5D6A2DAA54D700684754 /* LiveMapView.swift */,
+				05FC5D6E2DAA602E00684754 /* ContentView.swift */,
+				053E78DA2DBE19AF0067D860 /* LocationPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,15 +262,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */,
-				05FC5D6B2DAA54D700684754 /* LiveMapView.swift in Sources */,
+				053E78DB2DBE19AF0067D860 /* LocationPickerView.swift in Sources */,
+				05FC5D6F2DAA602E00684754 /* ContentView.swift in Sources */,
 				05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */,
 				05FC5D582DA99CC600684754 /* CLLocationCoordinate2D .swift in Sources */,
 				05FC5D692DAA54B900684754 /* TrackedUserAnnotationView.swift in Sources */,
-				05FC5D632DAA545700684754 /* TrackingManager.swift in Sources */,
 				05FC5D612DA99D9600684754 /* LocationManager.swift in Sources */,
-				05FC5D592DA99CC600684754 /* ContentView.swift in Sources */,
+				05FC5D592DA99CC600684754 /* MainMapView.swift in Sources */,
 				05FC5D5A2DA99CC600684754 /* MainViewModel.swift in Sources */,
 				05FC5D5B2DA99CC600684754 /* SwiftUIMapsApp.swift in Sources */,
+				053E78DD2DBE19E50067D860 /* View+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMaps/Preview Content\"";
-				DEVELOPMENT_TEAM = ST8356WU8B;
+				DEVELOPMENT_TEAM = 4NR77LPFLG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location even when the app is in the background to enhance the experience.";
@@ -427,15 +431,16 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = IbrahimGedami.SwiftUIMaps;
+				PRODUCT_BUNDLE_IDENTIFIER = ibrahimMoGedmi.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -448,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMaps/Preview Content\"";
-				DEVELOPMENT_TEAM = ST8356WU8B;
+				DEVELOPMENT_TEAM = 4NR77LPFLG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location even when the app is in the background to enhance the experience.";
@@ -458,15 +463,16 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = IbrahimGedami.SwiftUIMaps;
+				PRODUCT_BUNDLE_IDENTIFIER = ibrahimMoGedmi.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
