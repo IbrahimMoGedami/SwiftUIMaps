@@ -9,10 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var showLocationPicker: Bool = false
+    
     var body: some View {
-        NavigationView {
-            SearchView()
-                .navigationBarHidden(true)
+        NavigationStack {
+            List {
+                Button("Pick a location") {
+                    showLocationPicker.toggle()
+                }
+                .locationPicker(isPresented: $showLocationPicker) { coordinates in
+                    if let coordinates {
+                        print(coordinates.latitude)
+                        print(coordinates.longitude)
+                    }
+                }
+            }
+            .navigationTitle("Location Picker")
         }
     }
     
