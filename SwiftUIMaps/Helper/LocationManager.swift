@@ -105,7 +105,7 @@ extension LocationManager: CLLocationManagerDelegate {
             isSearching = false
         }
     }
-    
+        
     func updatingMapPosition(_ placemark: MKPlacemark)  {
         let coordinate = placemark.coordinate
         let region = MKCoordinateRegion(center: coordinate , latitudinalMeters: 1000, longitudinalMeters: 1000)
