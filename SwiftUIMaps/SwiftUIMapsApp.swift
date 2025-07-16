@@ -13,7 +13,7 @@ struct SwiftUIMapsApp: App {
     var body: some Scene {
         WindowGroup {
 //            LiveMapView(locationManager: LocationManager(), trackingManager: TrackingManager())
-            ContentView()
+            VerifyEmployeeView()
         }
     }
     

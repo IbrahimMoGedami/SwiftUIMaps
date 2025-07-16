@@ -21,6 +21,7 @@
 		05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D652DAA547E00684754 /* TrackedUser.swift */; };
 		05FC5D692DAA54B900684754 /* TrackedUserAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */; };
 		05FC5D6F2DAA602E00684754 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FC5D6E2DAA602E00684754 /* ContentView.swift */; };
+		2A86C5682E151B4000209986 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86C5672E151B4000209986 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		05FC5D652DAA547E00684754 /* TrackedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedUser.swift; sourceTree = "<group>"; };
 		05FC5D682DAA54B900684754 /* TrackedUserAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedUserAnnotationView.swift; sourceTree = "<group>"; };
 		05FC5D6E2DAA602E00684754 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A86C5672E151B4000209986 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				05FC5D512DA99CC600684754 /* MainMapView.swift */,
 				05FC5D522DA99CC600684754 /* MainViewModel.swift */,
 				05FC5D532DA99CC600684754 /* SwiftUIMapsApp.swift */,
+				2A86C5672E151B4000209986 /* File.swift */,
 			);
 			path = SwiftUIMaps;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05FC5D572DA99CC600684754 /* Annotations+Extensions.swift in Sources */,
+				2A86C5682E151B4000209986 /* File.swift in Sources */,
 				053E78DB2DBE19AF0067D860 /* LocationPickerView.swift in Sources */,
 				05FC5D6F2DAA602E00684754 /* ContentView.swift in Sources */,
 				05FC5D662DAA547E00684754 /* TrackedUser.swift in Sources */,

@@ -5,4 +5,215 @@
 //  Created by Ibrahim Mo Gedami on 02/07/2025.
 //
 
-import Foundation
+import SwiftUI
+
+struct VerifyEmployeeView: View {
+    
+    @State private var name = ""
+    @State private var password = ""
+    @State private var reason = ""
+    @State private var isShaking = false
+    @State private var isVerifying = false
+    @State private var showForm = false
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        ZStack {
+            // Background Gradient
+            LinearGradient(
+                gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.purple.opacity(0.3)]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
+            VStack(spacing: 24) {
+                Text("Verify Identity")
+                    .font(.largeTitle.bold())
+                    .foregroundStyle(.primary)
+                    .padding(.top, 10)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+                    .animation(.easeOut.delay(0.2), value: showForm)
+
+                VStack(spacing: 16) {
+                    FloatingInput(title: "Employee Name", text: $name)
+                    FloatingInput(title: "Password", text: $password, isSecure: true)
+                    FloatingInput(title: "Reason for Verification", text: $reason)
+                }
+                .offset(x: isShaking ? -8 : 0)
+                .animation(isShaking ? .default.repeatCount(3, autoreverses: true) : .default, value: isShaking)
+
+                HStack(spacing: 14) {
+                    GlassButton(
+                        title: "Cancel",
+                        background: .regularMaterial,
+                        foreground: .primary,
+                        border: Color.gray.opacity(0.3)
+                    ) {
+                        dismiss()
+                    }
+
+                    GlassButton(title: isVerifying ? "" : "Verify", background: .ultraThickMaterial, foreground: .blue, isLoading: isVerifying) {
+                        verify()
+                    }
+                }
+                .padding(.top, 10)
+            }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(.ultraThinMaterial)
+                    .background(.regularMaterial)
+                    .shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
+                    .cornerRadius(10)
+            )
+            .padding()
+            .scaleEffect(showForm ? 1 : 0.95)
+            .opacity(showForm ? 1 : 0)
+            .animation(.spring(response: 0.5, dampingFraction: 0.8), value: showForm)
+        }
+        .onAppear {
+            showForm = true
+        }
+    }
+
+    private func verify() {
+        guard !name.isEmpty, !password.isEmpty, !reason.isEmpty else {
+            isShaking = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                isShaking = false
+            }
+            return
+        }
+
+        isVerifying = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            isVerifying = false
+            dismiss()
+        }
+    }
+    
+}
+
+struct FloatingInput: View {
+    
+    let title: String
+    @Binding var text: String
+    var isSecure: Bool = false
+
+    @FocusState private var isFocused: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title)
+                .font(.caption)
+                .foregroundColor(isFocused ? .accentColor : .gray)
+
+            Group {
+                if isSecure {
+                    SecureField("", text: $text)
+                        .textContentType(.password)
+                        .focused($isFocused)
+                } else {
+                    TextField("", text: $text)
+                        .textContentType(.name)
+                        .focused($isFocused)
+                }
+            }
+            .padding(12)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(.ultraThinMaterial)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(isFocused ? Color.accentColor : Color.gray.opacity(0.2), lineWidth: 1.2)
+                    )
+            )
+            .shadow(color: isFocused ? Color.accentColor.opacity(0.2) : .clear, radius: 5)
+            .animation(.easeInOut(duration: 0.2), value: isFocused)
+        }
+    }
+}
+
+//struct GlassButton: View {
+//    var title: String
+//    var background: Color
+//    var foreground: Color
+//    var border: Color = .clear
+//    var isLoading: Bool = false
+//    var action: () -> Void
+//
+//    var body: some View {
+//        Button(action: {
+//            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+//            action()
+//        }) {
+//            ZStack {
+//                if isLoading {
+//                    ProgressView()
+//                        .progressViewStyle(CircularProgressViewStyle(tint: foreground))
+//                } else {
+//                    Text(title)
+//                        .font(.headline)
+//                }
+//            }
+//            .frame(height: 50)
+//            .frame(maxWidth: .infinity)
+//            .background(
+//                RoundedRectangle(cornerRadius: 16)
+//                    .fill(background)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 16)
+//                            .stroke(border, lineWidth: 1)
+//                    )
+//            )
+//            .foregroundColor(foreground)
+//            .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
+//        }
+//    }
+//}
+
+
+struct GlassButton: View {
+    
+    var title: String
+    var background: Material
+    var foreground: Color
+    var border: Color = .clear
+    var isLoading: Bool = false
+    var action: () -> Void
+
+    var body: some View {
+        Button(action: {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            action()
+        }) {
+            ZStack {
+                if isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: foreground))
+                } else {
+                    Text(title)
+                        .font(.headline)
+                }
+            }
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(background)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(border, lineWidth: 1)
+                    )
+            )
+            .foregroundColor(foreground)
+            .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
+        }
+    }
+}
+
+
+#Preview {
+    VerifyEmployeeView()
+}
