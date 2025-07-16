@@ -21,13 +21,27 @@ struct VerifyEmployeeView: View {
     var body: some View {
         ZStack {
             // Background Gradient
+//            LinearGradient(
+//                    gradient: Gradient(colors: [
+//                        Color.black.opacity(0.08),
+//                        Color.black.opacity(0.15)
+//                    ]),
+//                    startPoint: .topLeading,
+//                    endPoint: .bottomTrailing
+//                )
+//                .ignoresSafeArea()
+//                .background(.ultraThinMaterial)
+            
             LinearGradient(
-                gradient: Gradient(colors: [Color.blue.opacity(0.3), Color.purple.opacity(0.3)]),
+                gradient: Gradient(colors: [
+                    Color.black.opacity(0.25),
+                    Color.black.opacity(0.45)
+                ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
-
+            
             VStack(spacing: 24) {
                 Text("Verify Identity")
                     .font(.title.bold())
