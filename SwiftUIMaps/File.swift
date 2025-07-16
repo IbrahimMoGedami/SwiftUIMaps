@@ -30,7 +30,7 @@ struct VerifyEmployeeView: View {
 
             VStack(spacing: 24) {
                 Text("Verify Identity")
-                    .font(.largeTitle.bold())
+                    .font(.title.bold())
                     .foregroundStyle(.primary)
                     .padding(.top, 10)
                     .transition(.move(edge: .top).combined(with: .opacity))
@@ -119,7 +119,8 @@ struct FloatingInput: View {
     var rightView: AnyView? = nil  // Optional View as a stored property
 
     @FocusState private var isFocused: Bool
-
+    @State private var isPasswordVisible: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(title)
@@ -128,15 +129,28 @@ struct FloatingInput: View {
 
             HStack(spacing: 8) {
                 if isSecure {
-                    SecureField("", text: $text)
-                        .focused($isFocused)
+                    Group {
+                        if isPasswordVisible {
+                            TextField("", text: $text)
+                        } else {
+                            SecureField("", text: $text)
+                        }
+                    }
+                    .focused($isFocused)
                 } else {
                     TextField("", text: $text)
                         .disabled(!isEditable)
                         .focused($isFocused)
                 }
 
-                if let rightView {
+                if isSecure {
+                    Button {
+                        isPasswordVisible.toggle()
+                    } label: {
+                        Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
+                            .foregroundColor(.gray)
+                    }
+                } else if let rightView {
                     rightView
                 }
             }
