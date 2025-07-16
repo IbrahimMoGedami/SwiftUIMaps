@@ -16,6 +16,7 @@ struct VerifyEmployeeView: View {
     @State private var isVerifying = false
     @State private var showForm = false
     @Environment(\.dismiss) var dismiss
+    @State private var showEmployeeList = false
 
     var body: some View {
         ZStack {
@@ -36,7 +37,22 @@ struct VerifyEmployeeView: View {
                     .animation(.easeOut.delay(0.2), value: showForm)
 
                 VStack(spacing: 16) {
-                    FloatingInput(title: "Employee Name", text: $name)
+                    FloatingInput(
+                        title: "Employee Name",
+                        text: $name,
+                        isEditable: false,
+                        rightView: {
+                            Button {
+                                showEmployeeList = true
+                            } label: {
+                                Image(systemName: "chevron.down")
+                                    .foregroundColor(.accentColor)
+                            }
+                        }
+                    )
+                    .sheet(isPresented: $showEmployeeList) {
+                        EmployeeListView(selected: $name)
+                    }
                     FloatingInput(title: "Password", text: $password, isSecure: true)
                     FloatingInput(title: "Reason for Verification", text: $reason)
                 }
@@ -96,10 +112,11 @@ struct VerifyEmployeeView: View {
 }
 
 struct FloatingInput: View {
-    
     let title: String
     @Binding var text: String
     var isSecure: Bool = false
+    var isEditable: Bool = true
+    var rightView: AnyView? = nil  // Optional View as a stored property
 
     @FocusState private var isFocused: Bool
 
@@ -109,15 +126,18 @@ struct FloatingInput: View {
                 .font(.caption)
                 .foregroundColor(isFocused ? .accentColor : .gray)
 
-            Group {
+            HStack(spacing: 8) {
                 if isSecure {
                     SecureField("", text: $text)
-                        .textContentType(.password)
                         .focused($isFocused)
                 } else {
                     TextField("", text: $text)
-                        .textContentType(.name)
+                        .disabled(!isEditable)
                         .focused($isFocused)
+                }
+
+                if let rightView {
+                    rightView
                 }
             }
             .padding(12)
@@ -134,45 +154,6 @@ struct FloatingInput: View {
         }
     }
 }
-
-//struct GlassButton: View {
-//    var title: String
-//    var background: Color
-//    var foreground: Color
-//    var border: Color = .clear
-//    var isLoading: Bool = false
-//    var action: () -> Void
-//
-//    var body: some View {
-//        Button(action: {
-//            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-//            action()
-//        }) {
-//            ZStack {
-//                if isLoading {
-//                    ProgressView()
-//                        .progressViewStyle(CircularProgressViewStyle(tint: foreground))
-//                } else {
-//                    Text(title)
-//                        .font(.headline)
-//                }
-//            }
-//            .frame(height: 50)
-//            .frame(maxWidth: .infinity)
-//            .background(
-//                RoundedRectangle(cornerRadius: 16)
-//                    .fill(background)
-//                    .overlay(
-//                        RoundedRectangle(cornerRadius: 16)
-//                            .stroke(border, lineWidth: 1)
-//                    )
-//            )
-//            .foregroundColor(foreground)
-//            .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 4)
-//        }
-//    }
-//}
-
 
 struct GlassButton: View {
     
@@ -213,7 +194,64 @@ struct GlassButton: View {
     }
 }
 
-
 #Preview {
     VerifyEmployeeView()
+}
+
+struct EmployeeListView: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var selected: String
+    
+    let employees = ["Alice", "Bob", "Charlie", "Diana"]
+    
+    var body: some View {
+        NavigationStack {
+            List(employees, id: \.self) { employee in
+                Button {
+                    selected = employee
+                    dismiss()
+                } label: {
+                    HStack {
+                        Text(employee)
+                        if selected == employee {
+                            Spacer()
+                            Image(systemName: "checkmark")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Select Employee")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
+extension FloatingInput {
+    init(
+        title: String,
+        text: Binding<String>,
+        isSecure: Bool = false,
+        isEditable: Bool = true,
+        @ViewBuilder rightView: () -> some View
+    ) {
+        self.title = title
+        self._text = text
+        self.isSecure = isSecure
+        self.isEditable = isEditable
+        self.rightView = AnyView(rightView())
+    }
+
+    init(
+        title: String,
+        text: Binding<String>,
+        isSecure: Bool = false,
+        isEditable: Bool = true
+    ) {
+        self.title = title
+        self._text = text
+        self.isSecure = isSecure
+        self.isEditable = isEditable
+        self.rightView = nil
+    }
 }
